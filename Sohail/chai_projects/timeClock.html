@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Clock</title>
+    <style>
+        .body{
+            background-color: black;
+        }
+        .center{
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text{
+            color: white;
+        }
+        #clock{
+            width: 170px;
+            height: 70px;
+            background-color: orange;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="center">
+        <h3 class="text">Time Clock</h3>
+
+        <div id="clock"></div>
+    </div>
+</body>
+
+<script>
+    const clock = document.getElementById('clock');
+
+   
+
+    setInterval(function(){
+        let date = new Date();
+
+        clock.innerHTML = date.toLocaleTimeString();
+    },1000)
+</script>
+</html>

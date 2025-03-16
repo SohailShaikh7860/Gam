@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">This is for setTimeout</p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+   
+   const sohail = setInterval(function(){
+        console.log('Sohail shaikh', Date.now());
+   },1000)
+    
+   let inter;
+     //start button
+   document.querySelector('#start').addEventListener('click',()=>{
+      inter = setInterval(start,1000);
+
+     function start (){
+        console.log('sohail shaikh', Date.now());
+     }
+       console.log('Started');
+       
+       document.querySelector('#stop').addEventListener('click',()=>{
+       clearInterval(inter);
+       console.log('Stopped Again 1');
+   },{once : true})
+
+   })
+
+   document.querySelector('#stop').addEventListener('click',()=>{
+       clearInterval(sohail);
+       console.log('Stopped Again');
+   })
+ 
+
+  
+
+</script>
+</html>

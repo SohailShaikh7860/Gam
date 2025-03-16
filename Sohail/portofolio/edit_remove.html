@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <ul class="language">
+        <li>java</li>
+    </ul>
+  
+</body>
+<script>
+    // this method is optimized then the 2nd one
+    function lang(newLang){
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(newLang));
+    document.querySelector('.language').appendChild(li);
+    }
+    lang('javascript');
+
+    // not so optimazed
+    function secondLang(lang){
+        const li = document.createElement('li');
+        li.innerHTML = `${lang}`
+        document.querySelector('.language').appendChild(li);
+    }
+    secondLang("mogodb")
+
+    // editing the function
+    const seLang = document.querySelector("li:nth-child(2)");
+    const newli = document.createElement('li');
+    newli.textContent = "dbms";
+    seLang.replaceWith(newli);
+
+
+    // remove
+
+    const lastLang = document.querySelector("li:first-child");
+    lastLang.remove();
+  </script>  
+</html>

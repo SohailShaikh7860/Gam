@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        .newGame{
+            background-color:black;
+            display: inline-block;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+         
+        .contain{
+          background-color: rgb(112, 107, 107);
+        }
+
+
+        #detail{
+             color: white;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+        }
+
+        .forms{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .lab{
+            color:#212121;
+            font-size: 50px;
+        }
+
+        #input{
+            border: 5px solid black;
+            padding-top: 5px;
+            margin-top: 20px;
+        }
+
+        #submit{
+            background-color: rgb(97, 94, 94);
+            margin-top: 20px;
+            color: white;
+            padding: 5px 10px;
+        }
+        
+        .resultParas{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+        }
+       
+    </style>
+</head>
+<body class="contain">
+    <div class="game">
+        <div class="newGame">
+            <h1>Random Number Generator Game</h1>
+        </div>
+
+        <p id="detail">Play this game for fun by guessing the right number</p>
+    </div>
+
+    <form class="forms">
+        <label for="input" class="lab">Guess the number</label>
+        
+        <input type="text" id="input">
+        <input type="submit"  id="submit" value="SubmitGuess">
+    </form>
+
+    <div class="resultParas">
+        <p>previeus guess: <span class="guesses"></span></p>
+        <p>Remaining guess: <span class="remain"></span></p>
+        <p class="lowOrHi"></p>
+    </div>
+</body>
+<script src="numberGame.js">
+</script>
+</html>
